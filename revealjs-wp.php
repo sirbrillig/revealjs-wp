@@ -7,12 +7,12 @@
  * @package   RevealJS_WP
  * @author  Payton Swick <payton@foolord.com>
  * @license   MIT
- * @link      http://example.com
+ * @link      http://github.com/sirbrillig/revealjs-wp
  * @copyright 2013 Payton Swick
  *
  * @wordpress-plugin
  * Plugin Name: RevealJS_WP
- * Plugin URI:  http://example.com
+ * Plugin URI:  http://github.com/sirbrillig/revealjs-wp
  * Description: Display a reveal.js slideshow as a WordPress post.
  * Version:     0.0.1
  * Author:      Payton Swick <payton@foolord.com>

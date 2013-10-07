@@ -2,11 +2,11 @@
 /**
  * Fired when the plugin is uninstalled.
  *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
- * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2013 Your Name or Company Name
+ * @package   RevealJS_WP
+ * @author  Payton Swick <payton@foolord.com>
+ * @license   MIT
+ * @link      http://github.com/sirbrillig/revealjs-wp
+ * @copyright 2013 Payton Swick
  */
 
 // If uninstall, not called from WordPress, then exit

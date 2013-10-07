@@ -8,7 +8,7 @@
  * @package   RevealJS_WP
  * @author  Payton Swick <payton@foolord.com>
  * @license   MIT
- * @link      http://example.com
+ * @link      http://github.com/sirbrillig/revealjs-wp
  * @copyright 2013 Payton Swick
  */
 ?>
