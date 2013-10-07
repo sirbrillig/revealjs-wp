@@ -86,8 +86,8 @@ class RevealJS_WP {
 
 
 		// Define custom functionality. Read more about actions and filters: http://codex.wordpress.org/Plugin_API#Hooks.2C_Actions_and_Filters
-		add_action( 'TODO', array( $this, 'action_method_name' ) );
-		add_filter( 'TODO', array( $this, 'filter_method_name' ) );
+//		add_action( 'TODO', array( $this, 'action_method_name' ) );
+//		add_filter( 'TODO', array( $this, 'filter_method_name' ) );
 
 	}
 
@@ -274,7 +274,8 @@ class RevealJS_WP {
 	 * @since    0.0.1
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_slug . '-plugin-styles', plugins_url( 'css/public.css', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_style( $this->plugin_slug . '-plugin-reveal-styles', plugins_url( 'css/reveal.css', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_style( $this->plugin_slug . '-plugin-theme-styles', plugins_url( 'css/theme/default.css', __FILE__ ), array(), self::VERSION );
 	}
 
 	/**
@@ -283,7 +284,9 @@ class RevealJS_WP {
 	 * @since    0.0.1
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_slug . '-plugin-script', plugins_url( 'js/public.js', __FILE__ ), array( 'jquery' ), self::VERSION );
+		wp_enqueue_script( $this->plugin_slug . '-plugin-head', plugins_url( 'js/head.min.js', __FILE__ ), array(), self::VERSION );
+		wp_enqueue_script( $this->plugin_slug . '-plugin-reveal', plugins_url( 'js/reveal.min.js', __FILE__ ), array( $this->plugin_slug . '-plugin-head' ), self::VERSION );
+		wp_enqueue_script( $this->plugin_slug . '-plugin-public', plugins_url( 'js/public.js', __FILE__ ), array( $this->plugin_slug . '-plugin-reveal' ), self::VERSION, true );
 	}
 
 	/**
@@ -307,7 +310,7 @@ class RevealJS_WP {
 		 * Change 'manage_options' to the capability you see fit (http://codex.wordpress.org/Roles_and_Capabilities)
 		 */
 		$this->plugin_screen_hook_suffix = add_options_page(
-			__( 'Page Title', $this->plugin_slug ),
+			__( 'RequireJS-WP', $this->plugin_slug ),
 			__( 'Menu Text', $this->plugin_slug ),
 			'manage_options',
 			$this->plugin_slug,
