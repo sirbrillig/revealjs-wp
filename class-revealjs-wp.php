@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name.
+ * RevealJS_WP
  *
  * @package   RevealJS_WP
  * @author  Payton Swick <payton@foolord.com>

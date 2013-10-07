@@ -1,26 +1,24 @@
 <?php
 /**
- * The WordPress Plugin Boilerplate.
+ * RevealJS_WP
  *
- * A foundation off of which to build well-documented WordPress plugins that also follow
- * WordPress coding standards and PHP best practices.
+ * Display a reveal.js slideshow as a WordPress post.
  *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
- * @license   GPL-2.0+
+ * @package   RevealJS_WP
+ * @author  Payton Swick <payton@foolord.com>
+ * @license   MIT
  * @link      http://example.com
- * @copyright 2013 Your Name or Company Name
+ * @copyright 2013 Payton Swick
  *
  * @wordpress-plugin
- * Plugin Name: TODO
- * Plugin URI:  TODO
- * Description: TODO
- * Version:     1.0.0
- * Author:      TODO
- * Author URI:  TODO
+ * Plugin Name: RevealJS_WP
+ * Plugin URI:  http://example.com
+ * Description: Display a reveal.js slideshow as a WordPress post.
+ * Version:     0.0.1
+ * Author:      Payton Swick <payton@foolord.com>
  * Text Domain: plugin-name-locale
- * License:     GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:     MIT
+ * License URI: http://opensource.org/licenses/MIT
  * Domain Path: /languages
  */
 
@@ -29,14 +27,11 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// TODO: replace `class-plugin-name.php` with the name of the actual plugin's class file
-require_once( plugin_dir_path( __FILE__ ) . 'class-plugin-name.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'class-revealjs-wp.php' );
 
 // Register hooks that are fired when the plugin is activated or deactivated.
 // When the plugin is deleted, the uninstall.php file is loaded.
-// TODO: replace Plugin_Name with the name of the plugin defined in `class-plugin-name.php`
-register_activation_hook( __FILE__, array( 'Plugin_Name', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Plugin_Name', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'RevealJS_WP', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'RevealJS_WP', 'deactivate' ) );
 
-// TODO: replace Plugin_Name with the name of the plugin defined in `class-plugin-name.php`
-add_action( 'plugins_loaded', array( 'Plugin_Name', 'get_instance' ) );
+add_action( 'plugins_loaded', array( 'RevealJS_WP', 'get_instance' ) );

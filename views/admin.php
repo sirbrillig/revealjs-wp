@@ -5,11 +5,11 @@
  * This includes the header, options, and other information that should provide
  * The User Interface to the end user.
  *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
- * @license   GPL-2.0+
+ * @package   RevealJS_WP
+ * @author  Payton Swick <payton@foolord.com>
+ * @license   MIT
  * @link      http://example.com
- * @copyright 2013 Your Name or Company Name
+ * @copyright 2013 Payton Swick
  */
 ?>
 <div class="wrap">
