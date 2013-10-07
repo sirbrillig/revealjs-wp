@@ -1,19 +1,12 @@
-=== Plugin Name ===
-Contributors: sirbrillig
-Tags: slides
-Requires at least: 3.5.1
-Tested up to: 3.6
-Stable tag: trunk
-License: MIT
-License URI: http://opensource.org/licenses/MIT
+# Plugin Name
 
 Display a reveal.js slideshow as a WordPress post.
 
-== Description ==
+## Description
 
 Display a reveal.js slideshow as a WordPress post.
 
-== Installation ==
+## Installation
 
 1. Upload `revealjs-wp.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
